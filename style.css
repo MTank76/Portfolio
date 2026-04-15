@@ -319,17 +319,16 @@ h1 > span {
 }
 
 .projects__grid {
-    display: flex !important;
-    flex-direction: column;
+    display: centre;
     gap: 100px; /* Space between each different project */
     width: 100%;
 }
 
 .projects__item,
 .projects__flex-container {
-    display: flex !important;
+    display: flex centre;
     flex-direction: row; /* Puts image and text on one line */
-    align-items: flex-start;
+    
     gap: 50px; /* Space between the image and the text */
     width: 100%;
 }
