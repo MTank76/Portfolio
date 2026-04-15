@@ -738,68 +738,7 @@ h1 > span {
     translate: -40%;
   }
 }
-/* --- NEW PROJECT HOVER GALLERY CSS --- */
 
-.projects__image-wrapper {
-    position: relative;
-    overflow: hidden;
-    margin-block-end: 20px; /* Replaces the margin that was on .projects__picture */
-    border-radius: 4px; /* Optional: adds a slight modern curve to images */
-}
-
-/* Ensure the picture fills the wrapper */
-.projects__picture, 
-.projects__image {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin-block-end: 0; /* Remove old margin */
-}
-
-/* The Dark Overlay & Links Container */
-.projects__hover-links {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.75); /* The dark transparent background */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centers vertically */
-    align-items: center;     /* Centers horizontally */
-    gap: 30px;               /* Space between the two links */
-    opacity: 0;              /* Hidden by default */
-    transition: opacity 0.3s ease-in-out;
-}
-
-/* Reveal on hover */
-.projects__image-wrapper:hover .projects__hover-links {
-    opacity: 1;
-}
-
-/* Style the links inside the hover state */
-.projects__hover-links a.underline {
-    color: var(--text1);
-    font-size: 1.125rem;
-    letter-spacing: 3px;
-    padding-bottom: 8px;
-    margin: 0; /* Clears any previous margins */
-}
-
-/* Mobile Fallback: If on a phone, always show the buttons below the image 
-   since you cannot 'hover' with a finger */
-@media (max-width: 48rem) {
-    .projects__hover-links {
-        position: static;
-        background-color: transparent;
-        opacity: 1;
-        flex-direction: row;
-        justify-content: flex-start;
-        gap: 20px;
-        padding-top: 15px;
-    }
-}
 
 /* 999.98px */
 @media (max-width: 62.49875em) {
