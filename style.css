@@ -270,6 +270,12 @@ h1 > span {
   padding-block: 40px;
 }
 
+.skills__headline {
+    grid-column: 1 / -1; /* Forces heading to take the full top row */
+    margin-bottom: 20px;
+    width: 100%;
+}
+
 .skills__item {
   text-align: center;
 }
@@ -313,16 +319,19 @@ h1 > span {
 }
 
 .projects__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 60px;
-  text-align: center;
+    display: flex !important;
+    flex-direction: column;
+    gap: 100px; /* Space between each different project */
+    width: 100%;
 }
 
-.projects__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.projects__item,
+.projects__flex-container {
+    display: flex !important;
+    flex-direction: row; /* Puts image and text on one line */
+    align-items: flex-start;
+    gap: 50px; /* Space between the image and the text */
+    width: 100%;
 }
 
 .projects__image-wrapper {
