@@ -318,61 +318,21 @@ h1 > span {
   margin-block-end: 40px;
 }
 
-/* 1. Force the main container to stack projects vertically */
+/* Force the grid to act as a vertical list of full-width rows */
 .projects__grid {
-    display: flex !important;
-    flex-direction: column;
-    gap: 100px; /* Space between each different project */
-    width: 100%;
-}
-
-/* 2. Force the individual project to sit Side-by-Side (Image left, Text right) */
-.projects__item,
-.projects__flex-container {
-    display: flex !important;
-    flex-direction: row; /* Puts image and text on one line */
-    align-items: flex-start;
-    gap: 50px; /* Space between the image and the text */
-    width: 100%;
-}
-
-/* 3. Control the sizing of the image box */
-.projects__image-wrapper,
-.projects__image-box {
-    flex: 1; /* Takes up 50% of the row */
-    position: relative;
-    overflow: hidden;
-    border-radius: 6px;
-}
-
-.projects__picture, 
-.projects__image {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* 4. Control the sizing of the text box */
-.projects__text-content {
-    flex: 1; /* Takes up the other 50% of the row */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 80px; /* Space between each project row */
+    width: 100%;
 }
 
-/* 5. Mobile Responsive Fix: Stack vertically on phones */
-@media (max-width: 62.5em) {
-    .projects__item,
-    .projects__flex-container {
-        flex-direction: column; /* Stacks image on top of text */
-        gap: 30px;
-    }
-    
-    .projects__image-wrapper,
-    .projects__image-box {
-        width: 100%;
-        max-width: 100%;
-    }
+/* Side-by-Side Orientation */
+.projects__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Centers text vertically relative to image */
+    gap: 50px;           /* Space between image and text */
+    width: 100%;
 }
 
 .projects__image-wrapper {
