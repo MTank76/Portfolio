@@ -318,20 +318,23 @@ h1 > span {
   margin-block-end: 40px;
 }
 
-/* Force the grid to act as a vertical list of full-width rows */
+/* Container for all projects */
 .projects__grid {
     display: flex;
     flex-direction: column;
-    gap: 80px; /* Space between each project row */
+    gap: 80px; 
     width: 100%;
+    max-width: 1200px; /* Optional: keeps content from getting too wide */
+    margin: 0 auto;
 }
 
-/* Side-by-Side Orientation */
+/* Individual Project Row */
 .projects__item {
     display: flex;
     flex-direction: row;
-    align-items: center; /* Centers text vertically relative to image */
-    gap: 50px;           /* Space between image and text */
+    align-items: center; 
+    justify-content: space-between;
+    gap: 50px;
     width: 100%;
 }
 
