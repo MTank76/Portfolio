@@ -271,7 +271,7 @@ h1 > span {
 }
 
 .skills__headline {
-    grid-column: 1 / -1; /* Forces heading to take the full top row */
+    grid-column: 1 ; /* Forces heading to take the full top row */
     margin-bottom: 20px;
     width: 100%;
 }
